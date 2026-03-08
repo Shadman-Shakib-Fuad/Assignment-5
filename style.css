@@ -3,3 +3,53 @@ font-family:Arial;
 margin:0;
 background:#f5f6fa;
 }
+
+body{
+font-family:Arial;
+margin:0;
+background:#f5f6fa;
+}
+
+.login-page{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+.login-card{
+background:white;
+padding:40px;
+border-radius:10px;
+width:330px;
+text-align:center;
+box-shadow:0 10px 20px rgba(0,0,0,0.1);
+}
+
+.logo-img{
+width:70px;
+margin-bottom:10px;
+}
+
+.login-card input{
+width:100%;
+padding:10px;
+margin:10px 0;
+border:1px solid #ddd;
+border-radius:6px;
+}
+
+.login-card button{
+width:100%;
+padding:10px;
+background:#4f46e5;
+border:none;
+color:white;
+border-radius:6px;
+cursor:pointer;
+}
+
+.demo{
+font-size:12px;
+color:gray;
+}
