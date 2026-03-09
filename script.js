@@ -1,7 +1,5 @@
 let issues=[]
 
-let issues=[]
-
 function login(){
 
 let user=document.getElementById("username").value
