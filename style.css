@@ -115,3 +115,25 @@ cursor:pointer;
 background:#4f46e5;
 color:white;
 }
+
+.issue-count{
+display:flex;
+justify-content:space-between;
+padding:0 40px;
+}
+
+.open-marker{
+color:green;
+margin-right:10px;
+}
+
+.closed-marker{
+color:purple;
+}
+
+.issues-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
+padding:30px 40px;
+}
