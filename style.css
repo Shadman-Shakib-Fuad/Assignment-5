@@ -137,3 +137,42 @@ grid-template-columns:repeat(4,1fr);
 gap:20px;
 padding:30px 40px;
 }
+
+.issue-card{
+background:white;
+padding:15px;
+border-radius:8px;
+cursor:pointer;
+border-top:5px solid green;
+box-shadow:0 2px 8px rgba(0,0,0,0.1);
+transition:0.3s;
+}
+
+.issue-card.closed{
+border-top:5px solid purple;
+}
+
+.issue-card:hover{
+
+transform:translateY(-6px);
+
+box-shadow:0 10px 20px rgba(0,0,0,0.2);
+
+}
+
+.label{
+display:inline-block;
+background:#eee;
+padding:3px 8px;
+border-radius:5px;
+font-size:12px;
+margin-right:5px;
+}
+
+.priority{
+float:right;
+background:#fef3c7;
+padding:3px 8px;
+border-radius:5px;
+font-size:12px;
+}
