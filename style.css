@@ -96,3 +96,22 @@ cursor:pointer;
 .new-btn{
 background:#10b981;
 }
+
+.tabs{
+display:flex;
+gap:10px;
+padding:20px 40px;
+}
+
+.tab{
+padding:8px 20px;
+border:none;
+background:#e5e7eb;
+border-radius:20px;
+cursor:pointer;
+}
+
+.tab.active{
+background:#4f46e5;
+color:white;
+}
