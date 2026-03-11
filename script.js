@@ -80,3 +80,37 @@ container.appendChild(card)
 })
 
 }
+
+function filterIssues(type,event){
+
+let tabs=document.querySelectorAll(".tab")
+
+tabs.forEach(t=>t.classList.remove("active"))
+
+event.target.classList.add("active")
+
+if(type==="all"){
+
+displayIssues(issues)
+
+}else{
+
+let filtered=issues.filter(i=>i.status===type)
+
+displayIssues(filtered)
+
+}
+
+}
+
+async function searchIssue(){
+
+let text=document.getElementById("searchInput").value
+
+let res=await fetch(`https://phi-lab-server.vercel.app/api/v1/lab/issues/search?q=${text}`)
+
+let data=await res.json()
+
+displayIssues(data.data)
+
+}
