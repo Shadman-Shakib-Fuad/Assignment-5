@@ -17,3 +17,19 @@ alert("Wrong Credentials")
 }
 
 }
+
+async function loadIssues(){
+
+document.getElementById("loader").classList.remove("hidden")
+
+let res=await fetch("https://phi-lab-server.vercel.app/api/v1/lab/issues")
+
+let data=await res.json()
+
+issues=data.data
+
+displayIssues(issues)
+
+document.getElementById("loader").classList.add("hidden")
+
+}
