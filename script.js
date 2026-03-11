@@ -33,3 +33,50 @@ displayIssues(issues)
 document.getElementById("loader").classList.add("hidden")
 
 }
+
+function displayIssues(data){
+
+let container=document.getElementById("issueContainer")
+
+container.innerHTML=""
+
+document.getElementById("issueNumber").innerText=data.length+" Issues Found"
+
+data.forEach(issue=>{
+
+let card=document.createElement("div")
+
+card.className="issue-card"
+
+if(issue.status==="closed"){
+card.classList.add("closed")
+}
+
+card.innerHTML=`
+
+<h3>${issue.title}</h3>
+
+<p>${issue.description}</p>
+
+<div>
+
+<span class="label">bug</span>
+<span class="label">help wanted</span>
+
+<span class="priority">${issue.priority}</span>
+
+</div>
+
+<p>Author: ${issue.author}</p>
+
+<p>${issue.createdAt}</p>
+
+`
+
+card.onclick=()=>openModal(issue)
+
+container.appendChild(card)
+
+})
+
+}
